@@ -1,6 +1,6 @@
-package com.example.tollfreecalculator.model;
+package com.example.congestionTaxCalculator.model;
 
-import static com.example.tollfreecalculator.util.Constants.EMERGENCY;
+import static com.example.congestionTaxCalculator.util.Constants.EMERGENCY;
 
 public class Emergency implements Vehicle {
     @Override

@@ -1,12 +1,12 @@
-package com.example.tollfreecalculator;
+package com.example.congestionTaxCalculator;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TollFreeCalculatorApplication {
+public class CongestionTaxCalculatorApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(TollFreeCalculatorApplication.class, args);
+        SpringApplication.run(CongestionTaxCalculatorApplication.class, args);
     }
 }

@@ -1,8 +1,8 @@
-package com.example.tollfreecalculator;
+package com.example.congestionTaxCalculator;
 
-import com.example.tollfreecalculator.model.Car;
-import com.example.tollfreecalculator.model.Vehicle;
-import com.example.tollfreecalculator.controller.TollCalculatorServiceImpl;
+import com.example.congestionTaxCalculator.model.Car;
+import com.example.congestionTaxCalculator.model.Vehicle;
+import com.example.congestionTaxCalculator.controller.CongestionTaxCalculatorServiceImpl;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -13,18 +13,18 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.List;
 
-import static com.example.tollfreecalculator.util.Constants.*;
+import static com.example.congestionTaxCalculator.util.Constants.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 @SpringBootTest
-public class TollTestForNullParamExecutionTests {
-    private final TollCalculator tollCalculator;
+public class CongestionTaxCalForNullParamExecutionTests {
+    private final CongestionTaxCalculator tollCalculator;
     private static LocalDate date;
     private static Vehicle car;
 
-    public TollTestForNullParamExecutionTests() {
-        this.tollCalculator = new TollCalculator(new TollCalculatorServiceImpl());
+    public CongestionTaxCalForNullParamExecutionTests() {
+        this.tollCalculator = new CongestionTaxCalculator(new CongestionTaxCalculatorServiceImpl());
     }
 
     @BeforeAll

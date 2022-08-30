@@ -1,8 +1,8 @@
-package com.example.tollfreecalculator;
+package com.example.congestionTaxCalculator;
 
 
-import com.example.tollfreecalculator.model.*;
-import com.example.tollfreecalculator.controller.TollCalculatorServiceImpl;
+import com.example.congestionTaxCalculator.model.*;
+import com.example.congestionTaxCalculator.controller.CongestionTaxCalculatorServiceImpl;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -14,21 +14,20 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.example.tollfreecalculator.util.Constants.MAX_FEE_FOR_ONE_DAY;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 @SpringBootTest
-public class TollCalculatorForFreeDayTests {
+public class CongestionTaxCalculatorForFreeDayTests {
 
-    private static  TollCalculator tollCalculator;
+    private static CongestionTaxCalculator tollCalculator;
     private static LocalDate date;
     private static Vehicle car;
 
 
     @BeforeAll
     private static void initDate() {
-        tollCalculator= new TollCalculator(new TollCalculatorServiceImpl());
+        tollCalculator= new CongestionTaxCalculator(new CongestionTaxCalculatorServiceImpl());
         car = new Car();
     }
 

@@ -1,7 +1,7 @@
-package com.example.tollfreecalculator.model;
+package com.example.congestionTaxCalculator.model;
 
 
-import static com.example.tollfreecalculator.util.Constants.MILITARY;
+import static com.example.congestionTaxCalculator.util.Constants.MILITARY;
 
 public class Military implements Vehicle {
     @Override

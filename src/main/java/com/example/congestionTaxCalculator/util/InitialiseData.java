@@ -1,4 +1,4 @@
-package com.example.tollfreecalculator.util;
+package com.example.congestionTaxCalculator.util;
 
 import org.yaml.snakeyaml.Yaml;
 import org.yaml.snakeyaml.constructor.Constructor;
@@ -12,7 +12,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static com.example.tollfreecalculator.util.Constants.TIME_FEE_TO_PAY_YML;
+import static com.example.congestionTaxCalculator.util.Constants.TIME_FEE_TO_PAY_YML;
 
 public class InitialiseData {
     public static final Map<LocalDate,Boolean> holidayMap=new HashMap<>();
@@ -27,29 +27,30 @@ public class InitialiseData {
         int year= LocalDate.now().getYear();
 
         holidayMap.put(LocalDate.of(year,1,1),true);
-        holidayMap.put(LocalDate.of(year,1,6),true);
+        holidayMap.put(LocalDate.of(year,3,28),true);
+        holidayMap.put(LocalDate.of(year,3,29),true);
 
-        holidayMap.put(LocalDate.of(year,4,9),true);
-        holidayMap.put(LocalDate.of(year,4,10),true);
-        holidayMap.put(LocalDate.of(year,4,13),true);
+        holidayMap.put(LocalDate.of(year,4,1),true);
         holidayMap.put(LocalDate.of(year,4,30),true);
 
+
         holidayMap.put(LocalDate.of(year,5,1),true);
-        holidayMap.put(LocalDate.of(year,5,20),true);
-        holidayMap.put(LocalDate.of(year,5,21),true);
+        holidayMap.put(LocalDate.of(year,5,8),true);
+        holidayMap.put(LocalDate.of(year,5,9),true);
 
         holidayMap.put(LocalDate.of(year,6,5),true);
-        holidayMap.put(LocalDate.of(year,6,19),true);
+        holidayMap.put(LocalDate.of(year,6,6),true);
+        holidayMap.put(LocalDate.of(year,6,21),true);
 
         for(int i=1;i<=31;i++){
             holidayMap.put(LocalDate.of(year,7,i),true);
         }
 
-        holidayMap.put(LocalDate.of(year,10,30),true);
 
+        holidayMap.put(LocalDate.of(year,11,1),true);
         holidayMap.put(LocalDate.of(year,12,24),true);
         holidayMap.put(LocalDate.of(year,12,25),true);
-
+        holidayMap.put(LocalDate.of(year,12,26),true);
         holidayMap.put(LocalDate.of(year,12,31),true);
 
     }

@@ -1,7 +1,7 @@
-package com.example.tollfreecalculator.controller;
+package com.example.congestionTaxCalculator.controller;
 
-import com.example.tollfreecalculator.model.Vehicle;
-import com.example.tollfreecalculator.util.TimeIntervalFee;
+import com.example.congestionTaxCalculator.model.Vehicle;
+import com.example.congestionTaxCalculator.util.TimeIntervalFee;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
@@ -13,12 +13,12 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
-import static com.example.tollfreecalculator.util.Constants.*;
-import static com.example.tollfreecalculator.util.Constants.DIPLOMAT;
-import static com.example.tollfreecalculator.util.InitialiseData.holidayMap;
-import static com.example.tollfreecalculator.util.InitialiseData.timeFeeList;
+import static com.example.congestionTaxCalculator.util.Constants.*;
+import static com.example.congestionTaxCalculator.util.Constants.DIPLOMAT;
+import static com.example.congestionTaxCalculator.util.InitialiseData.holidayMap;
+import static com.example.congestionTaxCalculator.util.InitialiseData.timeFeeList;
 @Service
-public class TollCalculatorServiceImpl implements TollCalculatorService {
+public class CongestionTaxCalculatorServiceImpl implements CongestionTaxCalculatorService {
     @Override
     public boolean isTollFreeVehicle(Vehicle vehicle) {
         if (vehicle == null) return false;
@@ -56,6 +56,7 @@ public class TollCalculatorServiceImpl implements TollCalculatorService {
             return false;
         }
 
+
         if ( dates==null || CollectionUtils.isEmpty(Arrays.asList(dates))) {
             throw new RuntimeException(DATES_NULL_MSG);
         }
@@ -72,6 +73,7 @@ public class TollCalculatorServiceImpl implements TollCalculatorService {
     }
 
 
+    //Logic to retrieve toll fee from Yaml file depending on time of travel
     public double getFee(LocalTime time) {
         return timeFeeList.stream()
                 .filter(timeFee -> isMatched(timeFee, time))

@@ -1,4 +1,4 @@
-package com.example.tollfreecalculator.model;
+package com.example.congestionTaxCalculator.model;
 
 
 

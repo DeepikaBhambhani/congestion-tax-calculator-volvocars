@@ -1,4 +1,4 @@
-package com.example.tollfreecalculator.util;
+package com.example.congestionTaxCalculator.util;
 
 import lombok.Data;
 

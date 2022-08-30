@@ -1,7 +1,7 @@
-package com.example.tollfreecalculator;
+package com.example.congestionTaxCalculator;
 
-import com.example.tollfreecalculator.model.Vehicle;
-import com.example.tollfreecalculator.controller.TollCalculatorServiceImpl;
+import com.example.congestionTaxCalculator.model.Vehicle;
+import com.example.congestionTaxCalculator.controller.CongestionTaxCalculatorServiceImpl;
 
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -9,14 +9,14 @@ import java.time.temporal.ChronoUnit;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static com.example.tollfreecalculator.util.Constants.*;
+import static com.example.congestionTaxCalculator.util.Constants.*;
 
-public class TollCalculator {
+public class CongestionTaxCalculator {
 
 
-    private TollCalculatorServiceImpl tollService;
+    private CongestionTaxCalculatorServiceImpl tollService;
 
-    public TollCalculator(TollCalculatorServiceImpl tollService) {
+    public CongestionTaxCalculator(CongestionTaxCalculatorServiceImpl tollService) {
         this.tollService = tollService;
     }
     public int getTollFee(Vehicle vehicle, List<LocalDateTime> dates) {
